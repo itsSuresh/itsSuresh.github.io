@@ -6,18 +6,19 @@ html {
 
 body {
  	 font-family: 'Montserrat', sans-serif;
- 	 background-image: url(header.jpg);
+ 	 background-image: url(background.jpg);
 		background-size:cover;
 }
 .row{
-	border-bottom:2px solid gray;
+	border-bottom: 5px solid gray;
 }
 span{
 	font-size: 2em;
-	color:green;
+	color:darkgreen;
 	font-style: italic;
 	font-weight:900;
 	font-family:fantasy;
+
 }
 .flextry{
 	display: flex;
@@ -25,9 +26,14 @@ span{
 }
 .btn{
 	
-	margin-top:33em;
+	margin-top:35em;
 	margin-left:32em;
 	background-color:darkgreen;
 	
+}
+.col{
+
+
+
 }
 
