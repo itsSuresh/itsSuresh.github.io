@@ -1,39 +1,12 @@
+var color1 = document.querySelector(".color1");
+var color2 = document.querySelector(".color2");
+var body = document.querySelector("body");
+var gradient = document.querySelector("h4");
 
-let btn = document.getElementById("btn");
-let ul = document.querySelector("ol");
-let input= document.getElementById("input");
-let li= document.getElementsByClassName("items");
-function inputLength(){
-    return input.value.length;
+function setGradient(){
+    body.style.background=`linear-gradient(to right,${color1.value},${color2.value})`;
+
+    gradient.textContent=body.style.background +";";
 }
-
-function createItems(){
-    if(inputLength()>0){
-    var li=document.createElement("li");
-    li.className="items";
-    li.appendChild(document.createTextNode(input.value));
-
-    var newButton=document.createElement("button");
-    newButton.appendChild(document.createTextNode("delete"));
-    
-    li.appendChild(newButton);
-    ul.appendChild(li);
-    
-    input.value="";
-    }
-
-    newButton.addEventListener("click",deleteItems);
-    li.addEventListener("click",deleteItems1);
-}
-function deleteItems(){
-    ul.removeChild(this.parentElement);
-  
-}
-btn.addEventListener("click",createItems);
-li.addEventListener("click",deleteItems1);
-
-
-function deleteItems1(){
-    
-    this.classList.toggle("delete");
-}
+color1.addEventListener("input",setGradient);
+color2.addEventListener("input",setGradient);
